@@ -31,6 +31,8 @@
     "dist",
     "lib",
     "example",
-    "rollup.config.js"
+    "rollup.config.js",
+    ".storybook",
+    "**/*.stories.tsx"
   ]
 }
