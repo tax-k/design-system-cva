@@ -10,7 +10,12 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <button type='button' onClick={onClick} disabled={disabled} {...props}>
+    <button
+      type='button'
+      onClick={onClick}
+      disabled={disabled}
+      {...props}
+      className={'bg-red-500'}>
       {text}
     </button>
   );
