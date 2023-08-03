@@ -14,10 +14,10 @@ export const BaseButtonVariants = cva(
     variants: {
       intent: {
         primary: [
-          'bg-blue-500',
-          'text-white',
-          'border-transparent',
-          'hover:bg-blue-600',
+          // 'bg-blue-500',
+          // 'text-white',
+          // 'border-transparent',
+          // 'hover:bg-blue-600',
         ],
         secondary: [
           'bg-white',
