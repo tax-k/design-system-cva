@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Tui.Button text='testing 중입니다' />
+        <Tui.Button>Testing 중이에요</Tui.Button>
         <img src={logo} className='App-logo' alt='logo' />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

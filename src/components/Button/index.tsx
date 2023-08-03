@@ -1,22 +1,20 @@
 import React from 'react';
-import { ButtonProps } from './Button.types';
+import { ButtonProps, ButtonVariants } from './Button.types';
 
 const Button: React.FC<ButtonProps> = ({
+  className,
+  intent,
   size,
-  primary,
-  disabled,
-  text,
-  onClick,
   ...props
 }) => {
   return (
     <button
-      type='button'
-      onClick={onClick}
-      disabled={disabled}
-      {...props}
-      className={'bg-red-500'}>
-      {text}
+      className={ButtonVariants({
+        intent,
+        size,
+        className,
+      })}>
+      {props.children}
     </button>
   );
 };
