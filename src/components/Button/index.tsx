@@ -7,18 +7,16 @@ import { cn } from '@utils';
  */
 const Button: React.FC<ButtonProps> = ({
   className,
-  intent,
   size,
-  rounded,
+  variant,
   ...props
 }) => {
   return (
     <button
       className={cn(
         BaseButtonVariants({
-          intent,
           size,
-          rounded,
+          variant,
           className,
         }),
       )}

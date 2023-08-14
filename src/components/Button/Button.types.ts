@@ -4,49 +4,30 @@ export interface ButtonProps
     VariantProps<typeof BaseButtonVariants> {}
 
 export const BaseButtonVariants = cva(
-  [
-    'font-semibold',
-    'border',
-    'rounded',
-    'disabled:bg-gray-300 disabled:cursor-not-allowed',
-  ],
+  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background',
   {
     variants: {
-      intent: {
-        primary: [
-          // 'bg-blue-500',
-          // 'text-white',
-          // 'border-transparent',
-          // 'hover:bg-blue-600',
-        ],
-        secondary: [
-          'bg-white',
-          'text-gray-800',
-          'border-gray-400',
-          'hover:bg-gray-100',
-        ],
+      variant: {
+        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        destructive:
+          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+        outline:
+          'border border-input hover:bg-accent hover:text-accent-foreground',
+        secondary:
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        link: 'underline-offset-4 hover:underline text-primary',
       },
       size: {
-        small: ['text-sm', 'py-1', 'px-2'],
-        medium: ['text-base', 'py-2', 'px-4'],
-      },
-      rounded: {
-        none: 'rounded-none',
-        md: 'rounded-md',
-        lg: 'rounded-lg',
-        full: 'rounded-full',
+        default: 'h-9 py-2 px-4',
+        sm: 'h-8 px-3 rounded-md',
+        lg: 'h-10 px-8 rounded-md',
+        icon: 'h-9 w-9',
       },
     },
-    compoundVariants: [
-      {
-        intent: 'primary',
-        size: 'medium',
-        className: 'uppercase',
-      },
-    ],
     defaultVariants: {
-      intent: 'primary',
-      size: 'medium',
+      variant: 'default',
+      size: 'default',
     },
   },
 );
