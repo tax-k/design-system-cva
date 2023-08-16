@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonProps, BaseButtonVariants } from './Button.types';
-import { cn } from '@utils';
+import { tailwind } from '../../utils';
 
 /**
  * Button component using tawilwindcss + Class Variance Authority
@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={cn(
+      className={tailwind.cn(
         BaseButtonVariants({
           size,
           variant,
