@@ -38,7 +38,7 @@ export const Secondary: Story = {
 export const Small: Story = {
   args: {
     children: 'Small',
-    size: 'small',
+    size: 'sm',
   },
   parameters: {
     backgrounds: {
