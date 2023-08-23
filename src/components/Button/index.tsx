@@ -20,7 +20,8 @@ const Button: React.FC<ButtonProps> = ({
           className,
         }),
       )}
-      {...props}>
+      {...props}
+    >
       {props.children}
     </button>
   );

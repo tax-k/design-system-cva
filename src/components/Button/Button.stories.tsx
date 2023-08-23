@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   args: {
     children: 'Button',
-    rounded: 'lg',
+    variant: 'default',
     disabled: false,
   },
   parameters: {
@@ -24,14 +24,14 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     children: 'Primary',
-    intent: 'primary',
+    variant: 'default',
   },
 };
 
 export const Secondary: Story = {
   args: {
     children: 'Secondary',
-    intent: 'secondary',
+    variant: 'secondary',
   },
 };
 
