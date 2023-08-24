@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+
 import Button from './';
+import { PaperPlaneTilt, Trash } from '@phosphor-icons/react';
 
 const meta: Meta<typeof Button> = {
   title: 'Design System/Atoms/Button',
@@ -60,6 +62,13 @@ export const Disabled: Story = {
   },
 };
 
+export const Loading: Story = {
+  args: {
+    children: 'Loading',
+    isLoading: true,
+  },
+};
+
 export const Example: Story = {
   render: () => {
     return (
@@ -68,9 +77,17 @@ export const Example: Story = {
           <h1>Example</h1>
         </header>
 
-        <article className="bg-red-400">
+        <div className={'flex'}>
           <Button variant="default">Default</Button>
-        </article>
+
+          <Button variant="default" leftIcon={<PaperPlaneTilt size={16} />}>
+            Submit
+          </Button>
+
+          <Button variant={'destructive'} rightIcon={<Trash size={16} />}>
+            Delete
+          </Button>
+        </div>
       </div>
     );
   },

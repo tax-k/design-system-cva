@@ -46,7 +46,7 @@ const ButtonLegacy = ({
   return (
     <button
       className={classNames(
-        'relative rounded-md font-sourceCodePro',
+        'relative rounded-md p-3 px-1 py-2 font-sourceCodePro',
         variant === 'default' &&
           'text-text shadow-button border border-gray-400 bg-white',
         variant === 'monochrome' && 'text-text border border-gray-400 bg-white',

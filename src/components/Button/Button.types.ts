@@ -1,7 +1,7 @@
 import { VariantProps, cva } from 'class-variance-authority';
 
 export const BaseButtonVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background font-sourceCodePro',
+  'inline-flex items-center justify-center rounded-md font-sourceCodePro text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -13,13 +13,17 @@ export const BaseButtonVariants = cva(
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'underline-offset-4 hover:underline text-primary',
+        link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        default: 'h-9 py-2 px-4',
-        sm: 'h-8 px-3 rounded-md',
-        lg: 'h-10 px-8 rounded-md',
+        default: 'h-9 px-4 py-2',
+        sm: 'h-8 rounded-md px-3',
+        lg: 'h-10 rounded-md px-8',
         icon: 'h-9 w-9',
+      },
+      isLoading: {
+        true: 'cursor-wait',
+        false: '',
       },
     },
     defaultVariants: {
@@ -30,4 +34,8 @@ export const BaseButtonVariants = cva(
 );
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof BaseButtonVariants> {}
+    VariantProps<typeof BaseButtonVariants> {
+  isLoading?: boolean;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
+}
